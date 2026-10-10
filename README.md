@@ -8,7 +8,7 @@ Three of the GhostGuard more-ideas, built as one standalone toolset (they share 
 - **#9 Incident Report Generator** — a JSONL gateway trail becomes one self-contained HTML report: timeline, tallies, and every denial/ask with its deciding rule and exact (secret-redacted) payload.
 - **#17 "Guarded by GhostGuard" Badge** — a small SVG badge plus a *tallies-only* public summary page an agent or agency can link: counts and rule statistics, no payloads, no actor names, ever.
 
-By **Ghost Developer Studio**. Standalone add-on: it imports the GhostGuard engine's built `dist/` (read-only) for policy evaluation in the passport gate and fixture generation; it does not modify the core package. Zero runtime dependencies; Node ≥ 18; `private: true`, unpublished.
+By **Ghost Developer Studio**. Standalone add-on: it imports the GhostGuard engine's built `dist/` (read-only) for policy evaluation in the passport gate and fixture generation; it does not modify the core package. Zero runtime dependencies; Node ≥ 18. Public repository — v0.1.0.
 
 ```sh
 npm run verify   # the full test suite (33 checks)
@@ -109,3 +109,27 @@ cd ghostguard-reports && npm test
 ```
 
 Part of the GhostGuard family by **Ghost Developer Studio**.
+
+## The GhostGuard family
+
+GhostGuard is built in public by **Ghost Developer Studio** as a family of small, single-purpose packages around one core engine:
+
+- [ghostguard](https://github.com/littlestjames82-sys/ghostguard) — the core — record-first gateway, fail-closed policy, approvals, and audit for any agent
+- [ghostguard-mcp](https://github.com/littlestjames82-sys/ghostguard-mcp) — governed MCP proxy — every `tools/call` is classified, decided, and recorded before it is forwarded
+- [ghostguard-budgets](https://github.com/littlestjames82-sys/ghostguard-budgets) — stateful budgets, velocity rules, and a kill-switch freeze (stricter-only)
+- [ghostguard-secrets](https://github.com/littlestjames82-sys/ghostguard-secrets) — just-in-time secrets broker — the agent never holds the raw key
+- [ghostguard-replay](https://github.com/littlestjames82-sys/ghostguard-replay) — policy replay/backtest against a recorded trail, plus the Guard Score
+- [ghostguard-plan](https://github.com/littlestjames82-sys/ghostguard-plan) — hash-bound plan approvals and separation of duties / quorum
+- [ghostguard-reports](https://github.com/littlestjames82-sys/ghostguard-reports) — Ed25519 agent passports, incident reports, and the Guarded-by-GhostGuard badge *(this repo)*
+- [ghostguard-voice](https://github.com/littlestjames82-sys/ghostguard-voice) — voice approval prototype — a recorded, hash-bound voice decision on a pending ask
+- [ghostguard-distribution](https://github.com/littlestjames82-sys/ghostguard-distribution) — GitHub Action gate, red-team bench, plain-English policy author, approval channels, and browser Lite
+- [ghostguard-services](https://github.com/littlestjames82-sys/ghostguard-services) — agent governance audit service pack and white-label audit portal prototype
+- [policy-packs](https://github.com/littlestjames82-sys/policy-packs) — pre-written, behavior-tested governance policy packs for agent jobs
+
+**Studio roadmap board:** [ghost-roadmaps](https://github.com/littlestjames82-sys/ghost-roadmaps) — the visual board showing where everything in the studio stands.
+
+More from Ghost Developer Studio: [GhostBus](https://github.com/littlestjames82-sys/ghostbus) · [Ghost Hands](https://github.com/littlestjames82-sys/ghost-hands) · [Agent Seatbelt](https://github.com/littlestjames82-sys/agent-seatbelt) · [Ghost Bridge](https://github.com/littlestjames82-sys/ghost-bridge) · [Storefront](https://github.com/littlestjames82-sys/storefront)
+
+## License
+
+MIT — see `LICENSE`. Copyright (c) 2026 Ghost Developer Studio.
