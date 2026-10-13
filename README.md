@@ -8,7 +8,7 @@ Three of the GhostGuard more-ideas, built as one standalone toolset (they share 
 - **#9 Incident Report Generator** — a JSONL gateway trail becomes one self-contained HTML report: timeline, tallies, and every denial/ask with its deciding rule and exact (secret-redacted) payload.
 - **#17 "Guarded by GhostGuard" Badge** — a small SVG badge plus a *tallies-only* public summary page an agent or agency can link: counts and rule statistics, no payloads, no actor names, ever.
 
-By **Ghost Developer Studio**. Standalone add-on: it imports the GhostGuard engine's built `dist/` (read-only) for policy evaluation in the passport gate and fixture generation; it does not modify the core package. Zero runtime dependencies; Node ≥ 18. Public repository — v0.1.0.
+By **Ghost Developer Studio**. Standalone add-on: it uses the GhostGuard engine from the published `ghostguard` package (read-only) for policy evaluation in the passport gate and fixture generation; it does not modify the core package. One runtime dependency (the core); Node ≥ 18. Public repository — v0.1.0.
 
 ```sh
 npm run verify   # the full test suite (33 checks)
@@ -95,17 +95,13 @@ Everything demo/test data here is **synthetic and labelled**: `fixture/trail.jso
 
 ## Repository layout note
 
-This add-on imports the GhostGuard core engine from a **sibling checkout**:
-`../../ghostguard/dist/index.js` (its source and/or tests do; nothing in the
-core is modified). To run it, clone the core next to this repo so both folders
-share a parent directory:
+This add-on imports the GhostGuard core engine from the **published
+`ghostguard` package** (`"ghostguard": "^0.1.0"` in `package.json`; nothing
+in the core is modified). To run it, clone this repo and install:
 
 ```sh
-git clone https://github.com/littlestjames82-sys/ghostguard
 git clone https://github.com/littlestjames82-sys/ghostguard-reports
-# build the core once so dist/ exists:
-cd ghostguard && npm run build && cd ..
-cd ghostguard-reports && npm test
+cd ghostguard-reports && npm install && npm test
 ```
 
 Part of the GhostGuard family by **Ghost Developer Studio**.

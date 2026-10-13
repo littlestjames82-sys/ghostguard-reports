@@ -15,7 +15,7 @@ import { execFileSync } from "node:child_process";
 import {
   compilePolicy,
   evaluatePolicy,
-} from "../../ghostguard/dist/index.js";
+} from "ghostguard";
 import {
   generateIssuerKeys,
   issuePassport,

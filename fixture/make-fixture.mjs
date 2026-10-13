@@ -4,7 +4,7 @@
  * labelled as such) produced the honest way: every record is a real
  * GhostGuard engine decision over fixture/policy.json, assembled by
  * gatewayRecordFromDecision and written by the engine's own JSONL
- * recorder (imported from ~/workspace/ghostguard/dist — read-only).
+ * recorder (imported from the published ghostguard package).
  * A received_at stamp is added per line, mirroring the shape the
  * GhostGuard Cloud list endpoint returns.
  *
@@ -19,7 +19,7 @@ import {
   evaluatePolicy,
   gatewayRecordFromDecision,
   createJsonlRecorder,
-} from "../../ghostguard/dist/index.js";
+} from "ghostguard";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const policy = compilePolicy(JSON.parse(readFileSync(join(here, "policy.json"), "utf8")));

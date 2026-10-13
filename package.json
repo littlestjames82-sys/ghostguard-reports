@@ -1,5 +1,8 @@
 {
   "description": "GhostGuard add-on toolset: agent passports (Ed25519-signed identity + tier gate), incident report generator (trail -> self-contained HTML), and the 'Guarded by GhostGuard' badge + redacted public trail summary. By Ghost Developer Studio. Standalone; imports the ghostguard engine dist, never modifies it.",
+  "dependencies": {
+    "ghostguard": "^0.1.0"
+  },
   "engines": {
     "node": ">=18.0.0"
   },
