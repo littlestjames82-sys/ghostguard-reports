@@ -1,4 +1,5 @@
 # GhostGuard Reports — Passports, Incident Reports, Badge
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Release](https://img.shields.io/github/v/release/littlestjames82-sys/ghostguard-reports)](https://github.com/littlestjames82-sys/ghostguard-reports/releases)
 
 **Signed agent identity, human-readable incident evidence, and a public trust badge — for any agent behind GhostGuard.**
 
